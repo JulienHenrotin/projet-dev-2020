@@ -3,3 +3,6 @@
 ################################################################################
 
 *.sqlite-journal
+/communication/target/
+/jee/traitement/target/
+/jee/communication/target/
