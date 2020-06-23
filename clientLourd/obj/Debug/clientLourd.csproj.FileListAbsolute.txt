@@ -1,0 +1,15 @@
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\bin\Debug\clientLourd.exe.config
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\bin\Debug\clientLourd.exe
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\bin\Debug\clientLourd.pdb
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.csprojAssemblyReference.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\MainWindow.g.cs
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\App.g.cs
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd_MarkupCompile.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd_MarkupCompile.lref
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\MainWindow.baml
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.g.resources
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.Properties.Resources.resources
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.csproj.GenerateResource.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.csproj.CoreCompileInputs.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.exe
+C:\Users\Martial\Source\Repos\projet-dev-2020\clientLourd\obj\Debug\clientLourd.pdb
