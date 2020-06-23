@@ -4,3 +4,7 @@ C:\Users\Martial\Source\Repos\projet-dev-2020\CAD\bin\Debug\CAD.pdb
 C:\Users\Martial\Source\Repos\projet-dev-2020\CAD\obj\Debug\CAD.csproj.CoreCompileInputs.cache
 C:\Users\Martial\Source\Repos\projet-dev-2020\CAD\obj\Debug\CAD.exe
 C:\Users\Martial\Source\Repos\projet-dev-2020\CAD\obj\Debug\CAD.pdb
+C:\Users\julie\Travail\projet_dev_2020\dotNet\CAD\obj\Debug\CAD.csprojAssemblyReference.cache
+C:\Users\julie\Travail\projet_dev_2020\dotNet\CAD\obj\Debug\CAD.csproj.CoreCompileInputs.cache
+C:\Users\julie\Travail\projet_dev_2020\dotNet\CAD\obj\Debug\CAD.exe
+C:\Users\julie\Travail\projet_dev_2020\dotNet\CAD\obj\Debug\CAD.pdb
