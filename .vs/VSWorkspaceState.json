@@ -3,11 +3,8 @@
     "",
     "\\dotNet",
     "\\dotNet\\CAD",
-    "\\dotNet\\CAD\\bin\\Debug",
-    "\\dotNet\\SVR\\bin",
-    "\\dotNet\\SVR\\obj",
-    "\\dotNet\\SVR\\Properties"
+    "\\dotNet\\Middleware\\Middleware"
   ],
-  "SelectedNode": "\\dotNet\\CAD\\Program.cs",
+  "SelectedNode": "\\dotNet\\CAD\\CAD.csproj",
   "PreviewInSolutionExplorer": false
 }

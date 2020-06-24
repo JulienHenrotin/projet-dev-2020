@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Common;
+using Dbconnection;
 
 namespace CAD
 {
@@ -10,7 +8,12 @@ namespace CAD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("azdiauzdhuoazhdiiahzdpi");
+            Console.WriteLine("Hello world CAD v2!!");
+
+            string connString = @"Server =DESKTOP-SOSI265; Database = master; Trusted_Connection = True;";
+
+            DbConnection.connection(connString);
+            
         }
     }
 }
