@@ -1,0 +1,7 @@
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\obj\Debug\SVR.csprojAssemblyReference.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\obj\Debug\SVR.csproj.CoreCompileInputs.cache
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\bin\Debug\SVR.exe.config
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\bin\Debug\SVR.exe
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\bin\Debug\SVR.pdb
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\obj\Debug\SVR.exe
+C:\Users\Martial\Source\Repos\projet-dev-2020\dotNet\SVR\obj\Debug\SVR.pdb
