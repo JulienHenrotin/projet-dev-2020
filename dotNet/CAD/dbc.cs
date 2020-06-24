@@ -7,10 +7,9 @@ using System.Data.SqlClient;
 
 namespace CAD
 {
-    public class Dbconnection
+    class dbc
     {
-       
-        public void connection (string connString)
+        public static void connection (string connString)
         {
             Console.WriteLine("Hello world CAD !!");
             
@@ -51,4 +50,3 @@ namespace CAD
         }
     }
 }
-

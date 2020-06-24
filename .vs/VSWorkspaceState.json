@@ -3,8 +3,8 @@
     "",
     "\\dotNet",
     "\\dotNet\\CAD",
-    "\\dotNet\\Middleware\\Middleware"
+    "\\dotNet\\clientLourd"
   ],
-  "SelectedNode": "\\dotNet\\CAD\\CAD.csproj",
+  "SelectedNode": "\\dotNet\\CAD\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
