@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
-    <artifactId>jee-ear</artifactId>
+    <artifactId>communication-ejb</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>jee-ear-1.0</name>
+    <name>communication-ejb-1.0</name>
     
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,12 +17,6 @@
     </properties>
     
     <dependencies>
-        <dependency>
-            <groupId>com.mycompany</groupId>
-            <artifactId>jee-ejb</artifactId>
-            <version>1.0</version>
-            <type>ejb</type>
-        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>

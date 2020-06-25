@@ -1,4 +1,4 @@
-package com.mycompany.jee;
+package com.mycompany.communication;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -1,4 +1,4 @@
-package com.mycompany.jee.resources;
+package com.mycompany.communication.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
