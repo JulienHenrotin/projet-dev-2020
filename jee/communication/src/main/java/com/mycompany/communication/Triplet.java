@@ -6,17 +6,24 @@
 package com.mycompany.communication;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.*;
+
 
 /**
  *
  * @author pierrethenot
  */
-class Triplet implements Serializable{
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)       
+public class Triplet implements Serializable{
     
-  
+  @XmlElement
     private String userToken ;
+  @XmlElement
     private String decryptFile;
+  @XmlElement
     private String nameFile;
+  @XmlElement
     private String keyDecryptFile;
 
 

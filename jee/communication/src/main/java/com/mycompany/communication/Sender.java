@@ -21,9 +21,9 @@ import javax.xml.bind.*;
  */
 @Stateless
 @WebService(
-  endpointInterface = "com.mycompany.communication.CommunicationEndPointInterface"
+  endpointInterface = "com.mycompany.communication.CommunicationEndPointInterface",
   //portName = "Communicationport",
-  //serviceName = "CommunicationService"
+  serviceName = "CommunicationService"
  )
 
 public class Sender implements CommunicationEndPointInterface {
@@ -32,7 +32,7 @@ public class Sender implements CommunicationEndPointInterface {
     @Inject //paquetage javax.inject
     private JMSContext context; //paquetage javax.jms
     
-    @Resource(lookup = "validationQUEUE") //paquetage javax.annotation
+    @Resource(lookup = "jms/validationQUEUE") //paquetage javax.annotation
     private Queue validationQUEUE; //paquetage javax.jms
 
     @Override
@@ -45,6 +45,7 @@ public class Sender implements CommunicationEndPointInterface {
         t.setNameFile(nameFile);
         t.setUserToken(userToken);
         sendDoc(t);
+       // System.out.println(t);
         return true;
     }
     
