@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jms.*;
+import javax.jws.*;
 import javax.xml.bind.*;
 
 /**
@@ -19,6 +20,12 @@ import javax.xml.bind.*;
  * @author pierrethenot
  */
 @Stateless
+@WebService(
+  endpointInterface = "com.mycompany.communication.CommunicationEndPointInterface"
+  //portName = "Communicationport",
+  //serviceName = "CommunicationService"
+ )
+
 public class Sender implements CommunicationEndPointInterface {
 
 

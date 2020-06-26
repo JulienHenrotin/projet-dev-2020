@@ -5,13 +5,19 @@
  */
 package com.mycompany.communication;
 
+import javax.jws.*;
+
 /**
  *
  * @author pierrethenot
  */
+@WebService(name = "CommunicationEndPoint")
 public interface CommunicationEndPointInterface {
+    @WebMethod(operationName = "SendDecryptFile")
+    @WebResult(name = "DecryptValidation")
+
     
-    Boolean receiveDoc(String userToken, String decryptFile, String nameFile, String keyDecryptFile) ;
+    Boolean receiveDoc(@WebParam(name="userToken") String userToken,@WebParam(name="decryptFile") String decryptFile,@WebParam(name="nameFile") String nameFile,@WebParam(name="keyDecryptFile") String keyDecryptFile) ;
 }
 
 
