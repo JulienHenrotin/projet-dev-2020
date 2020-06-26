@@ -22,13 +22,16 @@ public class TauxConfiance {
     private List<String> db =  new ArrayList<String>() ;
     private ArrayList<String> wordArrayList = new ArrayList<String>();
 
+    public TauxConfiance(){
+    //connect db ?
+    }
 
-    public Double traitement(String clearText) {
+    public Double traitement(String Decryptfile) {
         
         this.nbmot =  0;
         this.wordArrayList.clear();
        
-        for(String mot : clearText.split(" ")) {
+        for(String mot : Decryptfile.split(" ")) {
             this.nbmot = this.nbmot + 1;             
             if(nbmot <= this.nbmotmax){
                 if(motValidation(mot)){
