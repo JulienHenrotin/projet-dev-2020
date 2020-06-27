@@ -44,7 +44,6 @@ namespace SVR
             public string user_token;
             [System.Runtime.Serialization.DataMember]
             public object[] data;
-
         }
     }
     }

@@ -2,9 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\dotNet",
-    "\\dotNet\\CAD",
-    "\\dotNet\\clientLourd"
+    "\\dotNet\\Middleware",
+    "\\dotNet\\Middleware\\Middleware",
+    "\\dotNet\\Middleware\\Middleware\\CAD",
+    "\\dotNet\\Middleware\\Middleware\\Controleur",
+    "\\dotNet\\Middleware\\Middleware\\Traitement",
+    "\\dotNet\\SVR\\System",
+    "\\dotNet\\SVR\\System\\Runtime",
+    "\\dotNet\\SVR\\System\\Runtime\\Serialization"
   ],
-  "SelectedNode": "\\dotNet\\CAD\\Program.cs",
+  "SelectedNode": "\\dotNet\\Middleware\\Middleware\\Traitement\\traitement.cs",
   "PreviewInSolutionExplorer": false
 }
