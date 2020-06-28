@@ -7,8 +7,9 @@ package com.mycompany.traitement;
 
 
 
-import static java.lang.String.valueOf;
-import java.util.List;
+
+import java.net.URL;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.ActivationConfigProperty;
@@ -17,7 +18,7 @@ import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
-import javax.jms.ObjectMessage;
+
 
 @MessageDriven(activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "jms/validationQUEUE"),
@@ -25,12 +26,15 @@ import javax.jms.ObjectMessage;
 })
 public class ValidationTriplet implements MessageListener {
     
-    @EJB private TauxConfiance taux;
+    private TauxConfiance taux;
     //private ConnexionBDD ConnexionBDD;
+    private dbconnect dbconnect;
+   // URL wsdlLocation = new URL("http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/mex?wsdl");
    
-    public ValidationTriplet() {
+    public ValidationTriplet() throws SQLException {
         
-        //this.connexionBDD = new ConnexionBDD();
+        this.dbconnect = new dbconnect();
+        this.dbconnect.DBConnection();
     }
     
     @Override
@@ -55,11 +59,18 @@ public class ValidationTriplet implements MessageListener {
         }
           try {
      
-            Double tauxConfiance = taux.traitement(Decryptfile);
-            System.out.println("Taux confiance fichier décrypté : " + tauxConfiance + " %");
+           Double tauxConfiance = taux.traitement(Decryptfile);
+          System.out.println("Taux confiance fichier décrypté : " + tauxConfiance + " %");
 
             
            // envoie notif
+           if(tauxConfiance >= 15){
+              
+               //MyServiceLocator locator = new MyServiceLocator();
+             //   AuthService client = locator.getBasicHttpBinding_AuthService();
+               // String cookie = client.LoginCookie("login","password");
+           }
+            
                 }catch (Exception e) {
                      System.out.println(e.getMessage());
                 }

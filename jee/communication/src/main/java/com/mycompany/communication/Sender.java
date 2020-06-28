@@ -6,6 +6,7 @@
 package com.mycompany.communication;
 
 import java.io.*;
+import java.sql.SQLException;
 
 import java.util.logging.*;
 import javax.annotation.Resource;
@@ -22,7 +23,7 @@ import javax.xml.bind.*;
 @Stateless
 @WebService(
   endpointInterface = "com.mycompany.communication.CommunicationEndPointInterface",
-  //portName = "Communicationport",
+  //portName = "7070",
   serviceName = "CommunicationService"
  )
 

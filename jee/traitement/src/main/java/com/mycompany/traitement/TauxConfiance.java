@@ -5,6 +5,7 @@
  */
 package com.mycompany.traitement;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +21,13 @@ public class TauxConfiance {
     private int nbltrmax = 25;
     private int nbmotmax = 100;
     private List<String> db =  new ArrayList<String>() ;
+   
     private ArrayList<String> wordArrayList = new ArrayList<String>();
+    private  dbconnect dbconnect;
 
-    public TauxConfiance(){
+    public TauxConfiance() throws SQLException{
+        
+        this.dbconnect = new dbconnect();
     //connect db ?
     }
 
