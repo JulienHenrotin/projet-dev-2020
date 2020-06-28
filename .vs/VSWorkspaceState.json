@@ -4,13 +4,8 @@
     "\\dotNet",
     "\\dotNet\\Middleware",
     "\\dotNet\\Middleware\\Middleware",
-    "\\dotNet\\Middleware\\Middleware\\CAD",
-    "\\dotNet\\Middleware\\Middleware\\Controleur",
-    "\\dotNet\\Middleware\\Middleware\\Traitement",
-    "\\dotNet\\SVR\\System",
-    "\\dotNet\\SVR\\System\\Runtime",
-    "\\dotNet\\SVR\\System\\Runtime\\Serialization"
+    "\\dotNet\\Middleware\\Middleware\\bin\\Release"
   ],
-  "SelectedNode": "\\dotNet\\Middleware\\Middleware\\Traitement\\traitement.cs",
+  "SelectedNode": "\\dotNet\\Middleware",
   "PreviewInSolutionExplorer": false
 }

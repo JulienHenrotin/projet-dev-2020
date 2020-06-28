@@ -1,0 +1,2 @@
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.csprojAssemblyReference.cache
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.csproj.CoreCompileInputs.cache
