@@ -1,2 +1,7 @@
 C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.csprojAssemblyReference.cache
 C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.csproj.CoreCompileInputs.cache
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\bin\Debug\Middle.exe.config
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\bin\Debug\Middle.exe
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\bin\Debug\Middle.pdb
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.exe
+C:\Users\julie\source\repos\projetDEV\dotNet\Middleware\Middle\obj\Debug\Middle.pdb

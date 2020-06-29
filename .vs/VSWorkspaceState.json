@@ -3,9 +3,8 @@
     "",
     "\\dotNet",
     "\\dotNet\\Middleware",
-    "\\dotNet\\Middleware\\Middleware",
-    "\\dotNet\\Middleware\\Middleware\\bin\\Release"
+    "\\dotNet\\Middleware\\Middle\\Controleur"
   ],
-  "SelectedNode": "\\dotNet\\Middleware",
+  "SelectedNode": "\\dotNet\\Middleware\\Middle",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://communication.mycompany.com/" targetNamespace="http://communication.mycompany.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SendDecryptFile" type="tns:SendDecryptFile" />
+  <xs:element name="SendDecryptFileResponse" type="tns:SendDecryptFileResponse" />
+  <xs:complexType name="SendDecryptFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userToken" type="xs:string" />
+      <xs:element minOccurs="0" name="decryptFile" type="xs:string" />
+      <xs:element minOccurs="0" name="nameFile" type="xs:string" />
+      <xs:element minOccurs="0" name="keyDecryptFile" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendDecryptFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DecryptValidation" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

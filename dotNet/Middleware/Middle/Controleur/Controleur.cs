@@ -11,7 +11,7 @@ using cadTest;
 using System.Net.Http;
 using Middle.proxy;
 using idAndToken;
-
+using Middle.Controleur;
 
 namespace Middleware
 {
@@ -29,20 +29,30 @@ namespace Middleware
 
             STG msge = new STG();
 
-            msge.op_name = "test";
+            msge.op_name = "doc_a_decrypter";
             msge.user_login = "julien";
             msge.op_info = "opInfoOKLM";
             msge.user_psw = "root";
+            msge.data[0] = "fichier";
 
             // quand quelque chose arrive ici ca doit lancer la création de threads
 
-            ThreadPool.QueueUserWorkItem(gestionThread(msge));
+            //ThreadPool.QueueUserWorkItem(gestionThread(msge, stateInfo));
+
+            ThreadPool.QueueUserWorkItem(
+                        new WaitCallback(delegate (object state)
+                        {
+                            gestionThread(msge);
+            
+                        }), null);
+
 
             // ===================reception info java ==========================
             // quand java renvoi une réponse pour un doc il faut couper le thread de ce doc 
-           
-            CancellationTokenSource tokenCancel = tabThreadDoc["filename"];
-            tokenCancel.Cancel();
+
+            /*CancellationTokenSource tokenCancel = tabThreadDoc["filename"];
+            tokenCancel.Cancel();*/
+            // envoie de mail
 
             Console.Read();
         }
@@ -63,13 +73,21 @@ namespace Middleware
                         CancellationTokenSource test;
                         test = new CancellationTokenSource();
                         tabThreadDoc.Add(msge.data[i].ToString(), test);
-                        ThreadPool.QueueUserWorkItem(traitementCTRL(msge.data[i].ToString() , msge) , test);
-                    }                   
+                        ThreadPool.QueueUserWorkItem(
+                        new WaitCallback(delegate (object state)
+                        {
+                            traitementCTRL(msge.data[i].ToString(), msge);
+
+                        }), null);
+                    }
+                    break;
+                case "validation":
+                    string email = ReadBDD.readMail(msge);
+                    envoieMail.email_send(email, msge.data[0].ToString());
                     break;
             }
         }
-        
-        
+
 
         //====================LOGIN===============================
         public static STG loginCTRL(STG msge)
@@ -97,36 +115,8 @@ namespace Middleware
         public static void traitementCTRL(string nomFichier, STG msge)
         {
             string fichier = traitement.lectureFichier(nomFichier);
-            traitement.generationCLE(fichier , msge);
-          
+            traitement.generationCLE(fichier, msge, nomFichier);
+
         }
-
-
-
-        //====================ENVOI de MAIL ===================
-
-
-        //===============HTTP==================
-        /*private static readonly HttpClient client = new HttpClient();
-
-        public static void httprequetejava ()
-        {
-            Wvar _url = "http://ADRESSE PIERRE";
-            var _action = "http://ADRESS PIERRE/ACTION";
-
-            XmlDocument soapEnvelopeXml = CreateSoapEnvelope();
-            HttpWebRequest webRequest = CreateWebRequest(_url, _action);
-            InsertSoapEnvelopeIntoWebRequest(soapEnvelopeXml, webRequest);
-        }
-
-        private static HttpWebRequest CreateWebRequest(string url, string action)
-        {
-            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
-            webRequest.Headers.Add("SOAPAction", action);
-            webRequest.ContentType = "text/xml;charset=\"utf-8\"";
-            webRequest.Accept = "text/xml";
-            webRequest.Method = "POST";
-            return webRequest;
-        }*/
     }
 }

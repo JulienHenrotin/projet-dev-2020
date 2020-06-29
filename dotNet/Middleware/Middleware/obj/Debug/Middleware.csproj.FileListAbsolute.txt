@@ -1,7 +1,0 @@
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\bin\Debug\Middleware.exe.config
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\bin\Debug\Middleware.exe
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\bin\Debug\Middleware.pdb
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\obj\Debug\Middleware.csprojAssemblyReference.cache
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\obj\Debug\Middleware.csproj.CoreCompileInputs.cache
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\obj\Debug\Middleware.exe
-C:\Users\julie\Travail\projet_dev_2020\dotNet\Middleware\Middleware\obj\Debug\Middleware.pdb

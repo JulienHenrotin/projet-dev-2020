@@ -47,7 +47,7 @@ namespace packageTraitement
             return outputString;
         }
 
-        public static void generationCLE (string text , STG msge)
+        public static void generationCLE (string text , STG msge , string nomFichier)
         {
             string[] alpha = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
             int W, X, Y, Z;
@@ -70,7 +70,10 @@ namespace packageTraitement
 
                             Console.WriteLine("-------------- clé : " + cleActuelle  + " --------------------");
                             Console.WriteLine(texteDECRYPTE);
-                            // envoi du texte + nom user + clé 
+
+                            Middle.SoapJava.CommunicationEndPointClient clientJAVA = new Middle.SoapJava.CommunicationEndPointClient();
+
+                            clientJAVA.SendDecryptFile(msge.user_token, texteDECRYPTE, nomFichier , cleActuelle);
                         }
                     }
                 }
