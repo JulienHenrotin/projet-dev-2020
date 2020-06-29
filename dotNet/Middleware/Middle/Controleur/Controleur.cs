@@ -13,6 +13,7 @@ using Middle.proxy;
 using idAndToken;
 using Middle.Controleur;
 
+
 namespace Middleware
 {
     class Program
@@ -37,31 +38,44 @@ namespace Middleware
 
             // quand quelque chose arrive ici ca doit lancer la création de threads
 
+            //=========================================================================================================
             //ThreadPool.QueueUserWorkItem(gestionThread(msge, stateInfo));
 
-            ThreadPool.QueueUserWorkItem(
+            /*ThreadPool.QueueUserWorkItem(
                         new WaitCallback(delegate (object state)
                         {
-                            gestionThread(msge);
+                            gestionThread(msge);               
+                        }), null);*/
+
             
-                        }), null);
+            threadInfo objectINFO = new threadInfo(msge);
+            //objectINFO.msg = msge;
 
+           // ThreadPool.QueueUserWorkItem(new WaitCallback(gestionThread), threadInfo);
 
-            // ===================reception info java ==========================
-            // quand java renvoi une réponse pour un doc il faut couper le thread de ce doc 
+            ThreadPool.QueueUserWorkItem(delegate (object state)
+            {
+                gestionThread(objectINFO.msg);
+            }
+            , objectINFO);
 
-            /*CancellationTokenSource tokenCancel = tabThreadDoc["filename"];
-            tokenCancel.Cancel();*/
-            // envoie de mail
+            //=========================================================================================================
+            //=========================================================================================================
+
 
             Console.Read();
         }
 
         //================ GESTION THREAD ========================================
-        private static void gestionThread(STG msge)
+        private static void gestionThread(object a)
         {
             Console.WriteLine("Gestion thread");
-            switch (msge.op_name)
+            threadInfo threadInfo = a as threadInfo;
+            String opname = threadInfo.msg.op_name;
+
+            STG msge = threadInfo.msg;
+
+            switch (opname)
             {
                 case "demande_login":
                     msge = loginCTRL(msge);     // <-- la il y a la liste doc + token user ---- envoyer au client
@@ -77,7 +91,6 @@ namespace Middleware
                         new WaitCallback(delegate (object state)
                         {
                             traitementCTRL(msge.data[i].ToString(), msge);
-
                         }), null);
                     }
                     break;

@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Controleur\envoieMail.cs" />
     <Compile Include="Controleur\Controleur.cs" />
+    <Compile Include="Controleur\threadInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Traitement\traitement.cs" />
   </ItemGroup>

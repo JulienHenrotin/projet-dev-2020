@@ -3,8 +3,9 @@
     "",
     "\\dotNet",
     "\\dotNet\\Middleware",
+    "\\dotNet\\Middleware\\Middle",
     "\\dotNet\\Middleware\\Middle\\Controleur"
   ],
-  "SelectedNode": "\\dotNet\\Middleware\\Middle",
+  "SelectedNode": "\\dotNet\\Middleware\\Middle\\Middle.sln",
   "PreviewInSolutionExplorer": false
 }
