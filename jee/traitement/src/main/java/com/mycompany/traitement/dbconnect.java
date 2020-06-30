@@ -6,6 +6,8 @@
 package com.mycompany.traitement;
 
 import java.sql.*;
+import java.util.*;
+import java.util.logging.Level;
 
 
 /**
@@ -13,14 +15,11 @@ import java.sql.*;
  * @author pierrethenot
  */
 public class dbconnect {
-    
+   public Connection connection;
+
     public dbconnect() throws SQLException{
-       DBConnection();
-    }
-    
-    
-    public static void DBConnection()throws SQLException {
-        System.out.println("-------- Oracle JDBC Connection Testing ------");
+         
+         System.out.println("-------- Oracle JDBC Connection Testing ------");
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (ClassNotFoundException e) {
@@ -30,20 +29,39 @@ public class dbconnect {
         }
 
         System.out.println("Oracle JDBC Driver Registered!");
-        Connection connection = null;
+ 
 
-        try {
-            connection = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@25.77.253.191:1521:PROJETDEV", "SYSTEM", "Julien14");
+        try{
+          
+        connection = DriverManager.getConnection("jdbc:oracle:thin:@192.168.109.133:1521:ORCL", "SYSTEM", "admin");
             System.out.println("Connexion réussie");
-
-        } catch (SQLException e) {
-
-            System.out.println("Connection Failed! Check output console");
-            e.printStackTrace();
-            return;
-        }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+               // java.util.logging.Logger.getLogger(dbconnect.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
+    
+    public List<String> getMot(){        
+        List<String> array = new ArrayList();
+        
+        try {
+           
+            Statement statem = connection.createStatement();
+            ResultSet listword = statem.executeQuery("SELECT * FROM DICO");
+              System.out.println("getmot start");
+            while(listword.next()){
+                array.add(listword.getString( "mot" ));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+         System.out.println(array);
+        return array;
+    }
+    
+    
+
+    
 }
     
 

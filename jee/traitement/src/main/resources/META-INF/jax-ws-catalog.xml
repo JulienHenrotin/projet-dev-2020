@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+        <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?wsdl"
+                uri="wsdl/SOAService.wsdl"/>
+    </catalog>

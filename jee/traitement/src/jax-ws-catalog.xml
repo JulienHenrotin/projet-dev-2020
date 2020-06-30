@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?wsdl" uri="wsdl/25.38.253.159_8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/.wsdl"/>
+    <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?xsd=xsd0" uri="wsdl/25.38.253.159_8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/.xsd_xsd0.xsd"/>
+    <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?xsd=xsd1" uri="wsdl/25.38.253.159_8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/.xsd_xsd1.xsd"/>
+    <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?xsd=xsd2" uri="wsdl/25.38.253.159_8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/.xsd_xsd2.xsd"/>
+    <system systemId="http://25.38.253.159:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/?xsd=xsd3" uri="wsdl/25.38.253.159_8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/.xsd_xsd3.xsd"/>
+</catalog>

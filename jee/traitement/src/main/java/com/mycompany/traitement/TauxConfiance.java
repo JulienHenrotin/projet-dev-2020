@@ -8,11 +8,14 @@ package com.mycompany.traitement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.ejb.*;
 
-/**
+/*
  *
  * @author pierrethenot
  */
+@Stateless
+@LocalBean
 public class TauxConfiance {
     
     
@@ -23,15 +26,17 @@ public class TauxConfiance {
     private List<String> db =  new ArrayList<String>() ;
    
     private ArrayList<String> wordArrayList = new ArrayList<String>();
-    private  dbconnect dbconnect;
+   // private  dbconnect dbconnect;
+    private List<String> motbdd;
 
     public TauxConfiance() throws SQLException{
         
-        this.dbconnect = new dbconnect();
-    //connect db ?
+        dbconnect connexion = new dbconnect();
+        this.motbdd = connexion.getMot();
+        
     }
 
-    public Double traitement(String Decryptfile) {
+        public Double traitement(String Decryptfile) {
         
         this.nbmot =  0;
         this.wordArrayList.clear();
@@ -39,11 +44,11 @@ public class TauxConfiance {
         for(String mot : Decryptfile.split(" ")) {
             this.nbmot = this.nbmot + 1;             
             if(nbmot <= this.nbmotmax){
-                if(motValidation(mot)){
-                    if(checkBDD(mot, this.db)){
+              //  if(motValidation(mot)){
+                    if(checkBDD(mot, this.motbdd)){
                         this.wordArrayList.add(mot);
                     }
-                }
+               // }
             }
         }
         System.out.println("echantillonage établie: " + this.wordArrayList.size() + "\n Nombre de mots : " + this.nbmot);
@@ -74,7 +79,7 @@ public class TauxConfiance {
         motFichier = motFichier.toLowerCase();
         for (String motBdd : db) {
             if (motFichier.equals(motBdd)){
-                System.out.println("check bdd effectué : " + motFichier);
+               // System.out.println("check bdd effectué : " + motFichier);
                 return true;
             }
         }
