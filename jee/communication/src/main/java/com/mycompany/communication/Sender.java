@@ -46,7 +46,7 @@ public class Sender implements CommunicationEndPointInterface {
         t.setNameFile(nameFile);
         t.setUserToken(userToken);
         sendDoc(t);
-       // System.out.println(t);
+       //System.out.println(t);
         return true;
     }
     
@@ -65,7 +65,7 @@ public class Sender implements CommunicationEndPointInterface {
                     jaxbMarshaller.marshal(triplet, writer);
                     String xmlMessage = writer.toString();
                     //affichage du XML dans la console de sortie
-                    System.out.println(xmlMessage);
+                   //System.out.println(xmlMessage);
                     //encapsulation du document au format XML dans un objet javax.jms.TextMessage
                         TextMessage msg = context.createTextMessage(xmlMessage);
 

@@ -22,7 +22,7 @@ public class TauxConfiance {
     private int nbmot = 0;
     private int nbltrmin = 2;
     private int nbltrmax = 25;
-    private int nbmotmax = 100;
+    private int nbmotmax = 300;
     private List<String> db =  new ArrayList<String>() ;
    
     private ArrayList<String> wordArrayList = new ArrayList<String>();
@@ -45,13 +45,14 @@ public class TauxConfiance {
             this.nbmot = this.nbmot + 1;             
             if(nbmot <= this.nbmotmax){
               //  if(motValidation(mot)){
+              System.out.println(mot);
                     if(checkBDD(mot, this.motbdd)){
                         this.wordArrayList.add(mot);
                     }
                // }
             }
         }
-        System.out.println("echantillonage établie: " + this.wordArrayList.size() + "\n Nombre de mots : " + this.nbmot);
+        //System.out.println("echantillonage établie: " + this.wordArrayList.size() + "\n Nombre de mots : " + this.nbmot);
         Double taux = 0.0;
         
         if(!this.wordArrayList.isEmpty() && this.nbmot != 0){

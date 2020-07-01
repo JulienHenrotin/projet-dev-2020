@@ -47,15 +47,15 @@ public class dbconnect {
         try {
            
             Statement statem = connection.createStatement();
-            ResultSet listword = statem.executeQuery("SELECT * FROM DICO");
-              System.out.println("getmot start");
+            ResultSet listword = statem.executeQuery("SELECT * FROM MOTDICO");
+             // System.out.println("getmot start");
             while(listword.next()){
                 array.add(listword.getString( "mot" ));
             }
         } catch (Exception e) {
             System.out.println(e);
         }
-         System.out.println(array);
+         //System.out.println(array);
         return array;
     }
     

@@ -5,19 +5,28 @@
  */
 package com.mycompany.traitement;
 
+import java.util.*;
+import javax.xml.ws.handler.Handler;
+
 /**
  *
  * @author pierrethenot
  */
 public class NetWebService {
+
+    public NetWebService() {
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        int value;
+        value = 2;
+        //String result;
+        //result = GetData(value);
+        //System.out.println("testlol" + GetData(value));
+       
+
     
+
     
-    
-     private static Integer GetData(int value) {
-         com.mycompany.traitement.Service1 service = new com.mycompany.traitement.Service1();
-       com.mycompany.traitement.IService1 port = service.getNetTcpBindingIService1();
-        //return port.GetData(value);
-  //  }
-        return null;
+
     }
+
 }
