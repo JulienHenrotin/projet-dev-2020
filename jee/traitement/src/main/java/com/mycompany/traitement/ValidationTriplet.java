@@ -44,9 +44,7 @@ public class ValidationTriplet implements MessageListener {
     //private List<JAXBElement<String>> liste = new ArrayList<JAXBElement<String>>();
    // private JAXBElement<ArrayOfanyType> liste2 = new JAXBElement<ArrayOfanyType>();
     
-    public ValidationTriplet(){
-       // SendNotif();
-    }
+    
    
 
     @Override
@@ -89,7 +87,7 @@ public class ValidationTriplet implements MessageListener {
                
             //System.out.println("[envoie du triplet]");
              Double tauxConfiance = taux.traitement(Decryptfile);
-            //System.out.println("Taux confiance :"+ tauxConfiance+"-------------"+namefile+"------------"  );
+           // System.out.println("Taux confiance :"+ tauxConfiance+"-------------"+namefile+"------------"  + "   Clé de déchiffrmeent        "+keyDecryptfile);
             //   " + tauxConfiance +"\n"+ "   Clé de déchiffrmeent        "+keyDecryptfile
             String log = "\n" + "UserToken :" + userToken + "\n" + "---- File name :" + namefile + "\n" + "---- Key decrypt File:" + keyDecryptfile +  "----Taux de confiance:" + tauxConfiance;
             writeLog(log);
@@ -100,7 +98,7 @@ public class ValidationTriplet implements MessageListener {
             
           
            
-           if(tauxConfiance > 60){
+           if(tauxConfiance > 65){
                
                System.out.println("---------------------------"+keyDecryptfile+"---------------------------");
                 System.out.println("------------------------------------------------------------------");
@@ -108,8 +106,8 @@ public class ValidationTriplet implements MessageListener {
                     System.out.println("------------------------------------------------------------------");
                if (Decryptfile.contains("information secr")){
                     int searchinfo = tripletMessage.indexOf("information secr");
-                    int searchinfodeb = searchinfo + 26;
-                     int searchinfofin = searchinfodeb + 19;
+                    int searchinfodeb = searchinfo + 24;
+                     int searchinfofin = searchinfodeb + 18;
                     String op = "jeeinfo";
                     JAXBElement<String> opnam = test.createSTGOpInfo(op);
                   
@@ -180,6 +178,7 @@ public class ValidationTriplet implements MessageListener {
 
         String prefix = "[" + heure + ":" + minutes + ":" + secondes + "] ";
         FileWriter fw = null;
+        
         try {
             fw = new FileWriter(log, true);
         } catch (IOException e1) {

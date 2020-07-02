@@ -45,7 +45,7 @@ public class TauxConfiance {
             this.nbmot = this.nbmot + 1;             
             if(nbmot <= this.nbmotmax){
               //  if(motValidation(mot)){
-              System.out.println(mot);
+             // System.out.println(mot);
                     if(checkBDD(mot, this.motbdd)){
                         this.wordArrayList.add(mot);
                     }
